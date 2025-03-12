@@ -7,6 +7,8 @@ export class TemperatureController {
   @Get()
   async getTemperature(@Res() res: Response) {
     // const sysInfo = await si.cpu();
+    console.log('Get Temperature...');
+    
     const temperature = await si.cpuTemperature();
 
     res.status(HttpStatus.OK).json({
